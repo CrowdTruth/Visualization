@@ -1,45 +1,30 @@
-# Visualization
+### Installation 
 
-<h3> Installation </h3>
-<ul>  
-  <li>
-    <h4>Clone repo</h4>
-  </li>
-  <li>
-    <h4>go to repo folder</h4>
-  </li>
-  <li>
-    <h4>Install dependencies</h4>
-    npm install --save
-  </li>
-  <li>
-    <h4> Initialize Build </h4>
-    gulp init
-  </li>
-    <li>
-    <h4> Initialize gulp watcher </h4>
-    gulp <br>
+ - Clone repo
+ - go to repo folder
+ - Install dependencies
+    ``` npm install --save ```
+ - Initialize Build
+   ``` gulp init```
+ - Initialize gulp watcher
+    ``` gulp```
     the watcher will check for changes and update the dist/src files
-  </li>
-   <li>
-    <h4> Create minified version</h4>
-    gulp build<br>
+ - Create minified version
+  ```  gulp build```
     the minified files are in dist/build folder
-  </li>
-  <li>
-    <h4> Run </h4>
+ -  Run
     start a server pointing dist folder. 
     The way I am using it is:
     I have intalled node module http-server (sudo npm install -g http-server),<br>
-    cd dist<br>
-    http-server<br>
-    localhost:8080 should serve index.html.<br>
-  </li>
-  <li>
-    <h4> Notes </h4>
-    You have to disable authentication and enable cross-origin requests in the api,<br>
-    assuming that you have a local installation of Crowdtruth<br>
-    replace the beginning of Crowdtruth/app/controllers/Api/search/apiController with: (with // the changes) <br>
+  ```  
+  cd dist
+  http-server 
+  ```
+  localhost:8080 should serve index.html.
+ - Notes 
+    You have to disable authentication and enable cross-origin requests in the api,
+    assuming that you have a local installation of Crowdtruth
+    replace the beginning of Crowdtruth/app/controllers/Api/search/apiController with: (with // the changes)
   
   ```
    
@@ -67,7 +52,7 @@
 		$projects = ProjectHandler::getUserProjects($user, Permissions::PROJECT_READ);
 		$projectNames = array_column($projects, 'name');
 		$collection = $collection->whereIn('project', $projectNames);
-    //<-----to here
+    		//<-----to here
     
 		if(Input::has('match'))
 		{
@@ -75,12 +60,7 @@
 		}
 	
 	```
-		
-</li>
-<li> 
-	 <h4> Notes 2</h4>
-	 If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a different port), <br>
-	 go to  src/js/Visualizations/util/util.js and change it <br>
+ -  Notes 2
+	 If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a different port),
+	 go to  src/js/Visualizations/util/util.js and change it 
 	 dont forget to gulp again (if you dont have the watcher active)
-	</li>
-</ul>
