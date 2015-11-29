@@ -16,6 +16,16 @@
     <h4> Initialize Build </h4>
     gulp init
   </li>
+    <li>
+    <h4> Initialize gulp watcher </h4>
+    gulp <br>
+    the watcher will check for changes and update the dist/src files
+  </li>
+   <li>
+    <h4> Create minified version</h4>
+    gulp build<br>
+    the minified files are in dist/build folder
+  </li>
   <li>
     <h4> Run </h4>
     start a server pointing dist folder. 
@@ -65,3 +75,11 @@
 		}
 		```
 		
+</li>
+<li> 
+	 <h4> Notes 2</h4>
+	 If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a different port), <br>
+	 go to  src/js/Visualizations/util/util.js and change it <br>
+	 dont forget to gulp again (if you dont have the watcher active)
+	</li>
+</ul>
