@@ -73,7 +73,7 @@ var UnitsGroupedByAvgClarity = React.createClass({
           }
         },
 
-        name: 'Avg Clarity',
+        name: 'Units',
         data: []
       }]
     }

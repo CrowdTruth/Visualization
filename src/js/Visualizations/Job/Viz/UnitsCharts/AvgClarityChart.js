@@ -78,7 +78,7 @@ var AvgClarityChart = React.createClass({
           }
         },
 
-        name: 'Job Units',
+        name: 'Avg Clarity',
         data: []
       }]
     }
