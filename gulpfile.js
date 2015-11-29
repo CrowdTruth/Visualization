@@ -40,7 +40,7 @@ gulp.task('less', function() {
 gulp.task('watch', function() {
   gulp.watch(path.HTML, ['copy']);
   gulp.watch(path.LESS , ['less']);
-  gulp.watch(path.FRONTWISE_PATH, ['frontwise']);
+  //gulp.watch(path.FRONTWISE_PATH, ['frontwise']);
 
 
   var watcher  = watchify(browserify({
@@ -92,11 +92,11 @@ gulp.task('replaceHTML', function(){
 
 gulp.task('production', ['replaceHTML', 'build']);
 
-gulp.task('frontwise', function(){
-  gulp.src(path.FRONTWISE_PATH)
-    .pipe(concat('frontwise.js'))
-    .pipe(gulp.dest(path.DEST_SRC));
-});
+// gulp.task('frontwise', function(){
+//   gulp.src(path.FRONTWISE_PATH)
+//     .pipe(concat('frontwise.js'))
+//     .pipe(gulp.dest(path.DEST_SRC));
+// });
 
 gulp.task('vendor', function(){
   gulp.src(path.VENDOR)
@@ -104,4 +104,5 @@ gulp.task('vendor', function(){
     .pipe(gulp.dest(path.DEST_SRC));
 });
 
+gulp.task('init', ['buildsrc', 'copy', 'less'])
 gulp.task('default', ['watch']);
