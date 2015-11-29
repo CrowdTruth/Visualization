@@ -1,0 +1,167 @@
+@import "blocks.less";
+@import "json.human.less";
+@import "reacttable.less";
+
+#popup{
+    width: 60%;
+    height: 100%;
+    overflow: scroll;
+
+}
+
+.boxes{
+  height: 100%;
+  overflow: scroll;
+  padding-right: 20px;
+}
+
+.actions{
+  overflow: scroll;
+}
+
+.actions .selected{
+  padding-top: 30px;  
+}
+
+.actions ul li {
+    font-size: 10px;
+    word-wrap: break-word;
+}
+
+.bordered {
+    margin:10px 10px 10px 10px;
+    border:1px solid black;
+    
+}
+
+.chart {
+  margin:10px 10px 10px 10px;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.fitscreen{
+  height: 80%;
+  overflow: scroll;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.bs-callout {
+    margin: 5px 0;
+    border: 2px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+body {
+    background-color: yellow;
+}
+
+.white{
+  background-color: white;
+}
+
+.grey{
+  background-color: #D8D8D8;
+}
+
+.job-title{
+    border-style: solid;
+    border-width: 5px;
+}
+
+.full-width{
+  width:'100%'
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+.table{
+  cursor:pointer
+}
