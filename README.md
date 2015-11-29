@@ -21,12 +21,12 @@
   http-server 
   ```
   localhost:8080 should serve index.html.
- - Notes 
+ - **Notes:** 
     You have to disable authentication and enable cross-origin requests in the api,
     assuming that you have a local installation of Crowdtruth
     replace the beginning of Crowdtruth/app/controllers/Api/search/apiController with: (with // the changes)
   
-  ```
+  ```php
    
   public function getIndex()
 	{
@@ -61,6 +61,6 @@
 	
 	```
 	
- -  Notes 2
+ -  **Notes 2:**
  	If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a 		different port), go to  src/js/Visualizations/util/util.js and change it 
 	 dont forget to gulp again (if you dont have the watcher active)
