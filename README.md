@@ -29,7 +29,7 @@
     <h4> Notes </h4>
     You have to disable authentication and enable cross-origin requests in the api,<br>
     assuming that you have a local installation of Crowdtruth<br>
-    replace the beginning of Crowdtruth/app/controllers/Api/search/apiController with: (with bold the changes) <br>
+    replace the beginning of Crowdtruth/app/controllers/Api/search/apiController with: (with // the changes) <br>
   
   ```
    
