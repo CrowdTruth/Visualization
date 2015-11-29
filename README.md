@@ -7,16 +7,16 @@
  - Initialize Build
    ``` gulp init```
  - Initialize gulp watcher
-    ``` gulp```
+    ``` gulp ```
     the watcher will check for changes and update the dist/src files
  - Create minified version
-  ```  gulp build```
+    ``` gulp build ```
     the minified files are in dist/build folder
  -  Run
     start a server pointing dist folder. 
     The way I am using it is:
     I have intalled node module http-server (sudo npm install -g http-server),<br>
-  ```  
+  ```
   cd dist
   http-server 
   ```
@@ -60,7 +60,7 @@
 		}
 	
 	```
+	
  -  Notes 2
-	 If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a different port),
-	 go to  src/js/Visualizations/util/util.js and change it 
+ 	If you have installed Crowdtruth on a url different than  http://localhost (even if you are using a 		different port), go to  src/js/Visualizations/util/util.js and change it 
 	 dont forget to gulp again (if you dont have the watcher active)
