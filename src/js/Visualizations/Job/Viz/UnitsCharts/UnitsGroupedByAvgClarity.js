@@ -73,7 +73,7 @@ var UnitsGroupedByAvgClarity = React.createClass({
           }
         },
 
-        name: 'Job Units',
+        name: 'Avg Clarity',
         data: []
       }]
     }
@@ -88,8 +88,10 @@ var UnitsGroupedByAvgClarity = React.createClass({
     }
 
     this.props.job.units.map(function(unit){
-      options.series[0].data[Math.floor(unit.avg_clarity / (this.state.clarityRange/100))].y ++;
-      options.series[0].data[Math.floor(unit.avg_clarity / (this.state.clarityRange/100))].units.push(unit._id);
+      var index = Math.floor(unit.avg_clarity / (this.state.clarityRange/100));
+      index = unit.avg_clarity == 1 ? index - 1: index;
+      options.series[0].data[index].y ++;
+      options.series[0].data[index].units.push(unit._id);
     }.bind(this))
 
     return options;
