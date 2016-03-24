@@ -144,7 +144,7 @@ var JobContainer = React.createClass({
         })
       }.bind(this);
 
-      var workerunitsUrl = util.host + 'api/search?limit=5000&match[documentType]=workerunit&match[job_id]=' + job._id;
+      var workerunitsUrl = util.host + 'api/search?limit=5000&match[type]=workerunit&match[job_id]=' + job._id;
       var batchUrl = util.host + 'api/search?only[0]=parents&match[_id]=' + job.batch_id;
       var workersUrl = util.host + 'api/search?collection=crowdagents'
 

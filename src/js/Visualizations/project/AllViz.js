@@ -33,8 +33,8 @@ var AllViz = React.createClass({
 
   getProjects: function(){
 
-    var fields = ['_id', 'type', 'realCost', 'user_id'];
-    var url= util.host + "api/search?noCache&match[documentType]=job";
+    var fields = ['_id', 'documentType', 'realCost', 'user_id'];
+    var url= util.host + "api/search?noCache&match[type]=job";
     fields.map(function(field, index){
       url += '&only[' + index + ']=' + field;
     })

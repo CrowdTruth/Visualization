@@ -41,7 +41,7 @@ var ProjectViz = React.createClass({
 
   getJobs: function(){
     var fields = ['_id', 'completion', 'created_at', 'realCost', 'user_id', 'workerunitsCount', 'status', 'format', 'projectedCost' ];
-    var url= util.host + "api/search?noCache&match[documentType]=job&match[type]=" + this.props.project;
+    var url= util.host + "api/search?noCache&match[type]=job&match[documentType]=" + this.props.project;
     var only='';
     fields.map(function(field, index){
       only+= ('&only['+index+']='+field);
